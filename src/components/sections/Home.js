@@ -7,15 +7,15 @@ function Home() {
     <section
       ref={vantaRef}
       id="home"
-      className="h-screen flex items-center flex-col justify-center relative"
+      className="flex items-center flex-col justify-center relative"
     >
-      <h1 className="text-[6.5rem] leading-[8rem] mb-[.5rem] text-center">
+      <h1 className="text-[8rem] leading-[9rem] mb-[.5rem] text-center">
         Software <span className="text-purple-primary">Developer</span> <br />
         <span className="text-purple-primary">UI/UX</span> Designer
         <span className="text-purple-primary">.</span>
       </h1>
       {/* Sub headline */}
-      <p className="text-[2rem] text-purple-secondary">
+      <p className="text-[3rem] text-purple-secondary">
         It's Work and Passion.
       </p>
 

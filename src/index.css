@@ -9,21 +9,20 @@
 
   body {
     font-family: "Open Sans";
+    font-size: 2.5rem;
+    background-color: black;
   }
 
-  body::-webkit-scrollbar {
+  main::-webkit-scrollbar {
     display: none;
-    width: 0.2rem;
   }
 
-  body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
-    @apply bg-black;
+  section {
+    @apply bg-black snap-center min-h-screen pt-[5rem] text-center;
   }
 
-  body::-webkit-scrollbar-thumb {
-    @apply bg-purple-primary;
-    outline: 1px solid slategrey;
+  h2 {
+    @apply text-[4rem] text-purple-primary flex items-center gap-[1.2rem] justify-center;
   }
 }
 
@@ -33,4 +32,18 @@
 
 .cta:hover > svg > path {
   @apply fill-purple-primary duration-200;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  grid-template-rows: repeat(3, min-content);
+  grid-column-gap: 7rem;
+  grid-row-gap: 5rem;
+  justify-content: center;
+}
+
+.tools-grid > svg {
+  width: 6rem;
+  height: 6rem;
 }
