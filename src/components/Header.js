@@ -1,11 +1,12 @@
-import React from "react";
+import Navigation from "./Navigation";
 
 function Header() {
   return (
-    <header className="col-span-1 flex justify-between px-[5rem] py-[2rem] items-center">
+    <header className="w-full flex justify-between md:px-[5rem] px-[2.5rem] pt-[1.5rem] items-center">
       {/* Name */}
-      <span className="text-[2.5rem]">Adekola Thanni</span>
-      <nav className="flex gap-[3rem] items-center">
+      <span className="text-[1.7rem] cursor-default">Adekola Thanni</span>
+      <Navigation />
+      <div className="flex gap-[3rem] items-center">
         {/* Linked in link */}
         <a
           href="https://www.linkedin.com/in/adekola-thanni-874a7523b/"
@@ -15,7 +16,7 @@ function Header() {
         >
           <svg
             width="30"
-            height="31"
+            height="30"
             viewBox="0 0 30 31"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +38,7 @@ function Header() {
         >
           <svg
             width="30"
-            height="31"
+            height="30"
             viewBox="0 0 30 31"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +50,18 @@ function Header() {
             />
           </svg>
         </a>
-      </nav>
+        {/* Hamburger */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+          className="nav-link-icon md:hidden"
+        >
+          <path fill="#eee" d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z" />
+        </svg>
+      </div>
     </header>
   );
 }

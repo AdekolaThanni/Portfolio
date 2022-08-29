@@ -9,17 +9,18 @@ const useVanta = () => {
       setVantaEffect(
         NET({
           el: container.current,
-          //   mouseControls: true,
-          //   touchControls: true,
+          mouseControls: true,
+          touchControls: true,
           gyroControls: false,
-          //   minHeight: 200.0,
-          //   minWidth: 200.0,
-          //   scale: 1.0,
-          //   scaleMobile: 1.0,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
           points: 9.0,
           maxDistance: 8.0,
           showDots: false,
-          color: 0x990093,
+          color: 0xaa14f0,
+          // color: 0x990093,
           backgroundColor: 0x0,
         })
       );
