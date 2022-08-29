@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: "Playfair Display";
+    line-height: 10rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+
+.nav-link-icon:hover path {
+  @apply fill-gray-dark duration-75;
+}
