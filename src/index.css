@@ -11,6 +11,7 @@
     font-family: "Open Sans";
     font-size: 2.5rem;
     background-color: black;
+    position: relative;
   }
 
   main::-webkit-scrollbar {
@@ -27,7 +28,7 @@
 }
 
 .nav-link-icon:hover path {
-  @apply fill-purple-secondary duration-75;
+  @apply fill-purple-primary duration-75;
 }
 
 .cta:hover > svg > path {
@@ -46,4 +47,16 @@
 .tools-grid > svg {
   width: 6rem;
   height: 6rem;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-white rounded-full;
 }
