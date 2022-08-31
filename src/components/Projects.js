@@ -114,7 +114,7 @@ const projectsList = [
 ];
 function Projects() {
   return (
-    <section className="snap-start">
+    <section id="projects" className="snap-start">
       {/* Heading */}
       <h2 className="mb-[5rem]">
         <svg
@@ -142,7 +142,7 @@ function Projects() {
             className="flex md:flex-row  flex-col gap-[4rem] max-w-[100rem] mx-auto h-[60rem]"
           >
             <img
-              src={require(`../../assets/img/${project.imageUrl}`)}
+              src={require(`../assets/img/${project.imageUrl}`)}
               alt=""
               className="w-[60rem] h-full"
             />
