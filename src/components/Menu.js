@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { navigationActions } from "../store/navigation";
 
 function Menu({ isVisible, hideMenu }) {
   const [isVisibleState, setIsVisibleState] = useState(isVisible);
-  const [currentSection, setCurrentSection] = useState("home");
+  const currentSection = useSelector((state) => state.navigationReducer);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setIsVisibleState(isVisible);
   }, [isVisible]);
 
   const navigateTo = (section) => {
-    setCurrentSection(section);
+    dispatch(navigationActions.updateSection(section));
     hideMenu();
-    // window.scrollTo(document.getElementById(section));
   };
 
   const parent = {
@@ -42,15 +44,16 @@ function Menu({ isVisible, hideMenu }) {
           animate="visible"
           exit="hide"
           variants={parent}
-          className="fixed overflow-hidden top-0 left-0 w-screen h-screen text-[4rem] bg-[#00000079] backdrop-blur-md shadow-md z-10 "
+          className="fixed overflow-hidden top-0 left-0 w-screen h-screen text-[4rem] bg-[#00000079] backdrop-blur-md shadow-md z-50 "
         >
+          {/* Close icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="5rem"
             height="5rem"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 16 16"
-            className="absolute right-[5rem] top-[5rem] group cursor-pointer"
+            className={`absolute right-[5rem] top-[5rem] group cursor-pointer duration-[10ms] z-10`}
             onClick={hideMenu}
           >
             <path
@@ -61,7 +64,8 @@ function Menu({ isVisible, hideMenu }) {
               className="fill-white group-hover:fill-purple-primary"
             />
           </svg>
-          <div className="text-white w-screen md:w-[50vw] relative h-screen bg-black">
+          {/* Sidebar */}
+          <div className="text-white w-screen md:w-[50vw] relative h-screen bg-[#00000091] backdrop-blur-md">
             <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col items-start justify-center gap-[3rem]">
               <a
                 href="#home"

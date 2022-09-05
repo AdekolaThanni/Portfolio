@@ -1,32 +1,17 @@
 import React from "react";
+import Section from "./Section";
 
 function About() {
   return (
-    <section id="about" className="">
-      <h2>
-        <svg
-          width="100"
-          height="3"
-          viewBox="0 0 100 3"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            y1="1.5"
-            x2="100"
-            y2="1.5"
-            stroke="currentColor"
-            stroke-width="3"
-          />
-        </svg>
-        About Me
-      </h2>
-      <p className="max-w-[80rem] mx-auto mt-[5rem]">
-        I’m a Fullstack software developer and UI/UX designer, I operate with
-        the best tools possible to create High end, SEO optimized, Fast and
+    <Section id="about" className="" title="About Me">
+      <p className="max-w-[80rem] mx-auto">
+        My name is <span className="text-purple-secondary">Adekola Thanni</span>
+        , I’m a Fullstack software developer and a UI/UX designer, I work{" "}
+        <span className="text-purple-secondary">Remotely </span>
+        with the best tools possible to create High end, SEO optimized, Fast and
         Responsive web apps. The tools I work with?
       </p>
-      <div className="tools-grid mx-auto max-w-[80rem] mt-[8rem]">
+      <div className="tools-grid grid grid-cols-3 sm:grid-cols-4 gap-y-[4rem] gap-x-[7rem] mx-auto justify-items-center  max-w-[80rem] mt-[8rem]">
         {/* HTML */}
         <svg
           fill="none"
@@ -252,7 +237,7 @@ function About() {
           />
         </svg>
       </div>
-    </section>
+    </Section>
   );
 }
 

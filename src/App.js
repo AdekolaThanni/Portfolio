@@ -12,7 +12,7 @@ function App() {
     <>
       <main
         ref={scrollView}
-        className="snap-y snap-mandatory h-screen overflow-y-scroll text-white scroll-smooth"
+        className="snap-y snap-mandatory h-screen overflow-y-scroll text-white scroll-smooth px-[1rem] sm:px-[2.5rem]"
       >
         {/* Hamburger */}
         <svg
@@ -21,7 +21,7 @@ function App() {
           height="50"
           preserveAspectRatio="xMidYMid meet"
           viewBox="0 0 24 24"
-          className="absolute top-[5rem] right-[4rem] z-10 group cursor-pointer"
+          className="absolute sm:top-[5rem] sm:right-[4rem] top-[2rem] right-[1rem] z-10 group cursor-pointer"
           onClick={() => setMenuVisibility(true)}
         >
           <path

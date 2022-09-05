@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-size: 62.5%;
+    @apply sm:text-[50%] lg:text-[62.5%] text-[62.5%];
   }
 
   body {
@@ -17,14 +17,6 @@
   main::-webkit-scrollbar {
     display: none;
   }
-
-  section {
-    @apply bg-black snap-center min-h-screen pt-[5rem] text-center;
-  }
-
-  h2 {
-    @apply text-[4rem] text-purple-primary flex items-center gap-[1.2rem] justify-center;
-  }
 }
 
 .nav-link-icon:hover path {
@@ -36,17 +28,16 @@
 }
 
 .tools-grid {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(4, min-content);
   grid-template-rows: repeat(3, min-content);
   grid-column-gap: 7rem;
-  grid-row-gap: 5rem;
-  justify-content: center;
+  grid-row-gap: 5rem; */
+  /* justify-content: center; */
 }
 
 .tools-grid > svg {
-  width: 6rem;
-  height: 6rem;
+  @apply sm:w-[6rem] sm:h-[6rem] w-[4.5rem] h-[4.5rem];
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -58,5 +49,5 @@
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-white rounded-full;
+  @apply bg-purple-primary rounded-full;
 }

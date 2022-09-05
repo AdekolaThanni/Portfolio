@@ -8,6 +8,9 @@ module.exports = {
         purple: { primary: "#AA14F0", secondary: "#BC8CF2" },
         white: "#EEEEEE",
       },
+      screens: {
+        sm: "700px",
+      },
     },
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],

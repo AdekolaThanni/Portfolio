@@ -1,4 +1,5 @@
 import React from "react";
+import Section from "./Section";
 
 const projectsList = [
   {
@@ -23,150 +24,74 @@ const projectsList = [
     appLiveVersionLink: "",
     appRepositoryLink: "",
   },
-  //   {
-  //     name: "Shortly",
-  //     imageUrl: "Shortly.png",
-  //     description:
-  //       "This is a web app that shortens urls based on the inputted live websitte. Also keeps record of shortened URL’s in the browser local storage for future use. Also allows copying shortened URL to clipboard by clicking a button for easier use.",
-  //     tools: [
-  //       "React",
-  //       "Redux",
-  //       "Tailwind CSS",
-  //       "Mongo DB",
-  //       "Node js",
-  //       "Express js",
-  //       "Stripe",
-  //       "React Router",
-  //       "Figma",
-  //       "Framer Motion",
-  //       "React Helmet",
-  //     ],
-  //     appWalkthroughVideoLink: "",
-  //     appLiveVersionLink: "",
-  //     appRepositoryLink: "",
-  //   },
-  //   {
-  //     name: "Shortly",
-  //     imageUrl: "Shortly.png",
-  //     description:
-  //       "This is a web app that shortens urls based on the inputted live websitte. Also keeps record of shortened URL’s in the browser local storage for future use. Also allows copying shortened URL to clipboard by clicking a button for easier use.",
-  //     tools: [
-  //       "React",
-  //       "Redux",
-  //       "Tailwind CSS",
-  //       "Mongo DB",
-  //       "Node js",
-  //       "Express js",
-  //       "Stripe",
-  //       "React Router",
-  //       "Figma",
-  //       "Framer Motion",
-  //       "React Helmet",
-  //     ],
-  //     appWalkthroughVideoLink: "",
-  //     appLiveVersionLink: "",
-  //     appRepositoryLink: "",
-  //   },
-  //   {
-  //     name: "Shortly",
-  //     imageUrl: "Shortly.png",
-  //     description:
-  //       "This is a web app that shortens urls based on the inputted live websitte. Also keeps record of shortened URL’s in the browser local storage for future use. Also allows copying shortened URL to clipboard by clicking a button for easier use.",
-  //     tools: [
-  //       "React",
-  //       "Redux",
-  //       "Tailwind CSS",
-  //       "Mongo DB",
-  //       "Node js",
-  //       "Express js",
-  //       "Stripe",
-  //       "React Router",
-  //       "Figma",
-  //       "Framer Motion",
-  //       "React Helmet",
-  //     ],
-  //     appWalkthroughVideoLink: "",
-  //     appLiveVersionLink: "",
-  //     appRepositoryLink: "",
-  //   },
-  //   {
-  //     name: "Shortly",
-  //     imageUrl: "Shortly.png",
-  //     description:
-  //       "This is a web app that shortens urls based on the inputted live websitte. Also keeps record of shortened URL’s in the browser local storage for future use. Also allows copying shortened URL to clipboard by clicking a button for easier use.",
-  //     tools: [
-  //       "React",
-  //       "Redux",
-  //       "Tailwind CSS",
-  //       "Mongo DB",
-  //       "Node js",
-  //       "Express js",
-  //       "Stripe",
-  //       "React Router",
-  //       "Figma",
-  //       "Framer Motion",
-  //       "React Helmet",
-  //     ],
-  //     appWalkthroughVideoLink: "",
-  //     appLiveVersionLink: "",
-  //     appRepositoryLink: "",
-  //   },
+  {
+    name: "Shortly",
+    imageUrl: "Shortly.png",
+    description:
+      "This is a web app that shortens urls based on the inputted live websitte. Also keeps record of shortened URL’s in the browser local storage for future use. Also allows copying shortened URL to clipboard by clicking a button for easier use.",
+    tools: [
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "Mongo DB",
+      "Node js",
+      "Express js",
+      "Stripe",
+      "React Router",
+      "Figma",
+      "Framer Motion",
+      "React Helmet",
+    ],
+    appWalkthroughVideoLink: "",
+    appLiveVersionLink: "",
+    appRepositoryLink: "",
+  },
 ];
 function Projects() {
   return (
-    <section id="projects" className="snap-start">
-      {/* Heading */}
-      <h2 className="mb-[5rem]">
-        <svg
-          width="100"
-          height="3"
-          viewBox="0 0 100 3"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            y1="1.5"
-            x2="100"
-            y2="1.5"
-            stroke="currentColor"
-            stroke-width="3"
-          />
-        </svg>
-        My Projects
-      </h2>
+    <Section
+      id="projects"
+      className="!snap-start space-y-[4rem]"
+      title="My Projects"
+    >
       {/* Projects */}
       {projectsList.map((project, index) => {
         return (
           <div
             key={index}
-            className="flex md:flex-row  flex-col gap-[4rem] max-w-[100rem] mx-auto h-[60rem]"
+            className="flex sm:flex-row flex-col md:gap-[4rem] gap-[2rem] max-w-[100rem] mx-auto h-fit"
           >
+            {/* Project image */}
             <img
               src={require(`../assets/img/${project.imageUrl}`)}
               alt=""
-              className="w-[60rem] h-full"
+              className="sm:w-[60rem] w-full  sm:h-[60rem]  h-[30rem] object-cover object-left-top"
             />
-            <div className="text-left text-[1.6rem] flex justify-between flex-col">
+            {/* Details */}
+            <div className="sm:text-left text-left sm:p-0 px-[.5rem] text-[1.6rem] flex justify-between gap-[3rem] flex-col">
+              {/* Project name and description */}
               <div className="">
                 <h3 className="text-[2.5rem] text-purple-secondary">
                   {project.name}
                 </h3>
                 <p className="">{project.description}</p>
               </div>
-              <div className="">
-                <span className="text-[2rem]">Tools</span>
-                <ul className="">
-                  {project.tools.map((tool) => (
-                    <li>{tool}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex justify-between">
+              {/* Tools used */}
+              <ul className="sm:block grid grid-cols-2 text-left gap-x-[6rem] gap-y-[1rem]">
+                <span className="text-[2rem] text-purple-secondary col-span-full mb-[.5rem]">
+                  Tools
+                </span>
+                {project.tools.map((tool) => (
+                  <li className="w-fit">{tool}</li>
+                ))}
+              </ul>
+              {/* Links */}
+              <div className="flex gap-[.5rem] flex-col sm:flex-row flex-wrap sm:self-start self-stretch">
                 <a
                   href={project.appWalkthroughVideoLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-[#03A400] hover:opacity-[0.8] flex items-center gap-[1rem] p-[1rem] duration-200"
+                  className="bg-[#03A400] hover:opacity-[0.8] flex items-center gap-[1rem] p-[1rem] justify-center duration-200"
                 >
                   Project Walkthrough
                   <svg
@@ -186,7 +111,7 @@ function Projects() {
                   href={project.appLiveVersionLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-[#10A79E] hover:opacity-[0.8] flex items-center gap-[1rem] p-[1rem] duration-200"
+                  className="bg-[#10A79E] hover:opacity-[0.8] flex items-center gap-[1rem] p-[1rem] justify-center duration-200"
                 >
                   Project Live View
                   <svg
@@ -206,7 +131,7 @@ function Projects() {
                   href={project.appRepositoryLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-[#9A0A0A] hover:opacity-[0.8] flex items-center gap-[1rem] p-[1rem] duration-200"
+                  className="bg-[#9A0A0A] hover:opacity-[0.8] flex items-center gap-[1rem] p-[1rem] justify-center duration-200"
                 >
                   Project Repo
                   <svg
@@ -227,7 +152,7 @@ function Projects() {
           </div>
         );
       })}
-    </section>
+    </Section>
   );
 }
 
