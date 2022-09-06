@@ -4,16 +4,19 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import PageScrollProgress from "./components/PageScrollProgress";
 
 function App() {
-  const scrollView = useRef();
+  const scrollRef = useRef();
   const [menuVisibility, setMenuVisibility] = useState(false);
   return (
     <>
       <main
-        ref={scrollView}
-        className="snap-y snap-mandatory h-screen overflow-y-scroll text-white scroll-smooth px-[1rem] sm:px-[2.5rem]"
+        ref={scrollRef}
+        className="snap-y snap-mandatory overflow-x-hidden h-screen overflow-y-scroll text-white scroll-smooth"
       >
+        {/* Page scroll progress */}
+        <PageScrollProgress scrollRef={scrollRef} />
         {/* Hamburger */}
         <svg
           xmlns="http://www.w3.org/2000/svg"

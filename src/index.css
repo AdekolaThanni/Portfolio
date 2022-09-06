@@ -27,15 +27,6 @@
   @apply fill-purple-primary duration-200;
 }
 
-.tools-grid {
-  /* display: grid;
-  grid-template-columns: repeat(4, min-content);
-  grid-template-rows: repeat(3, min-content);
-  grid-column-gap: 7rem;
-  grid-row-gap: 5rem; */
-  /* justify-content: center; */
-}
-
 .tools-grid > svg {
   @apply sm:w-[6rem] sm:h-[6rem] w-[4.5rem] h-[4.5rem];
 }

@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { navigationActions } from "../store/navigation";
 
 function Section({ id, className, children, title }) {
-  const computedClassName = `${className} bg-black snap-start min-h-screen pt-[2rem] sm:pt-[5rem] text-left sm:text-center`;
+  const computedClassName = `${className} bg-black snap-start min-h-screen pt-[2rem] sm:pt-[5rem] text-left sm:text-center px-[1rem] sm:px-[2.5rem]`;
   const dispatch = useDispatch();
 
   const updateSection = () => {
