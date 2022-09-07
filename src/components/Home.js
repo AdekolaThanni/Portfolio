@@ -18,7 +18,7 @@ function Home() {
       onViewportEnter={updateSection}
       viewport={{ margin: "-100px 0px 0px" }}
       id="home"
-      className="flex items-center flex-col justify-center bg-black snap-start min-h-screen pt-[2rem] sm:pt-[5rem] text-left sm:text-center"
+      className="flex items-center flex-col justify-center bg-black snap-start min-h-screen text-left sm:text-center"
     >
       {/* Headline */}
       <h1 className="text-[7.5rem] xs:text-[8rem] leading-[9.3rem] mb-[.5rem] text-center flex flex-col items-center">

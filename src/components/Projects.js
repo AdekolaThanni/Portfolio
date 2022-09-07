@@ -59,7 +59,7 @@ function Projects() {
         return (
           <div
             key={index}
-            className="flex sm:flex-row flex-col md:gap-[4rem] gap-[2rem] max-w-[100rem] mx-auto h-fit mb-[4rem]"
+            className="flex sm:flex-row flex-col md:gap-[4rem] gap-[2rem] max-w-[105rem] mx-auto h-fit mb-[4rem]"
           >
             {/* Project image */}
             <img
@@ -77,14 +77,12 @@ function Projects() {
                 <p className="">{project.description}</p>
               </div>
               {/* Tools used */}
-              <ul className="sm:block grid grid-cols-2 text-left gap-x-[6rem] gap-y-[1rem]">
+              <ul className="sm:block grid grid-cols-[repeat(2,minmax(min-content,1fr))] text-left  gap-y-[1rem]">
                 <span className="text-[2rem] text-purple-secondary col-span-full mb-[.5rem]">
                   Tools
                 </span>
                 {project.tools.map((tool, index) => (
-                  <li key={index} className="w-fit">
-                    {tool}
-                  </li>
+                  <li key={index}>{tool}</li>
                 ))}
               </ul>
               {/* Links */}

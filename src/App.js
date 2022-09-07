@@ -13,7 +13,7 @@ function App() {
     <>
       <main
         ref={scrollRef}
-        className="snap-y snap-mandatory overflow-x-hidden h-screen overflow-y-scroll text-white scroll-smooth"
+        className="snap-y snap-mandatory overflow-x-hidden w-screen h-screen overflow-y-scroll text-white scroll-smooth"
       >
         {/* Page scroll progress */}
         <PageScrollProgress scrollRef={scrollRef} />
