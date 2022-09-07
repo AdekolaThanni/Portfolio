@@ -51,7 +51,7 @@ function Projects() {
   return (
     <Section
       id="projects"
-      className="!snap-start space-y-[4rem]"
+      className="flex flex-col gap-[4rem]"
       title="My Projects"
     >
       {/* Projects */}
@@ -59,7 +59,7 @@ function Projects() {
         return (
           <div
             key={index}
-            className="flex sm:flex-row flex-col md:gap-[4rem] gap-[2rem] max-w-[100rem] mx-auto h-fit"
+            className="flex sm:flex-row flex-col md:gap-[4rem] gap-[2rem] max-w-[100rem] mx-auto h-fit mb-[4rem]"
           >
             {/* Project image */}
             <img

@@ -6,6 +6,7 @@ const useEmail = () => {
   const formRef = useRef();
 
   const sendEmail = () => {
+    setStatus("pending");
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -23,7 +24,7 @@ const useEmail = () => {
       );
   };
 
-  return { formRef, sendEmail, status, setStatus };
+  return { formRef, sendEmail, status };
 };
 
 export default useEmail;

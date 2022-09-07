@@ -1,18 +1,38 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 
-function Feedback({ status }) {
+function Feedback({ status, closeFeedback }) {
   const transition = {
     duration: 0.4,
     ease: "easeInOut",
   };
-  return (
+  return ReactDOM.createPortal(
     <motion.div
       initial={{ height: 0 }}
       animate={{ height: "100vh", transition: { duration: 0.1 } }}
       exit={{ height: 0, transition: { duration: 0.1 } }}
-      className="absolute w-screen bg-[#000000c4] backdrop-blur-lg flex flex-col items-center justify-center top-0 left-0 z-[1000] text-center"
+      className="absolute w-screen bg-[#000000c4] backdrop-blur-lg flex flex-col items-center justify-center top-0 left-0 z-[1000] text-center text-white"
     >
+      {/* Close Icon */}
+      <div className="hover:scale-110 absolute sm:right-[5rem] right-[3rem] top-[5rem] group cursor-pointer p-[.5rem] w-[5rem] h-[5rem] rounded-full bg-purple-primary z-[1000]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="4rem"
+          height="4rem"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          onClick={closeFeedback}
+        >
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="m7.116 8l-4.558 4.558l.884.884L8 8.884l4.558 4.558l.884-.884L8.884 8l4.558-4.558l-.884-.884L8 7.116L3.442 2.558l-.884.884L7.116 8z"
+            clip-rule="evenodd"
+            className="fill-white"
+          />
+        </svg>
+      </div>
       {status === "pending" && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +105,8 @@ function Feedback({ status }) {
           </span>
         </>
       )}
-    </motion.div>
+    </motion.div>,
+    document.getElementById("overlay")
   );
 }
 

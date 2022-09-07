@@ -5,7 +5,7 @@ import Feedback from "./Feedback";
 import { AnimatePresence } from "framer-motion";
 
 function Contact() {
-  const { formRef, sendEmail, status, setStatus } = useEmail();
+  const { formRef, sendEmail, status } = useEmail();
   const [feedback, setFeedback] = useState(false);
   const sendForm = (event) => {
     event.preventDefault();
@@ -13,7 +13,7 @@ function Contact() {
     setFeedback(true);
   };
   return (
-    <Section id="contact" title="Get in Touch!" className="relative mb-[2rem]">
+    <Section id="contact" title="Get in Touch!" className="mb-[2rem]">
       <form
         autoComplete="off"
         ref={formRef}
@@ -139,33 +139,14 @@ function Contact() {
       </form>
       {
         <AnimatePresence>
-          {feedback && <Feedback status={status} />}
+          {feedback && (
+            <Feedback
+              status={status}
+              closeFeedback={() => setFeedback(false)}
+            />
+          )}
         </AnimatePresence>
       }
-      {/* Close icon */}
-      {feedback && (
-        <div className="hover:scale-110 absolute sm:right-[5rem] right-[3rem] top-[5rem] group cursor-pointer p-[.5rem] w-[5rem] h-[5rem] rounded-full bg-purple-primary z-[1000]">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="4rem"
-            height="4rem"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 16 16"
-            onClick={() => {
-              setFeedback(false);
-              setStatus("pending");
-            }}
-          >
-            <path
-              fill="currentColor"
-              fill-rule="evenodd"
-              d="m7.116 8l-4.558 4.558l.884.884L8 8.884l4.558 4.558l.884-.884L8.884 8l4.558-4.558l-.884-.884L8 7.116L3.442 2.558l-.884.884L7.116 8z"
-              clip-rule="evenodd"
-              className="fill-white"
-            />
-          </svg>
-        </div>
-      )}
     </Section>
   );
 }
