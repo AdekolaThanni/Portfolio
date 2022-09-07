@@ -10,7 +10,7 @@ function PageScrollProgress({ scrollRef }) {
   });
   return (
     <motion.div
-      className="w-[0.2rem] h-screen origin-top bg-purple-primary fixed top-0 right-0 z-[1000]"
+      className="w-[0.2rem] h-screen origin-top bg-purple-primary fixed top-0 bottom-0 right-0 z-[1000]"
       style={{ scaleY }}
     ></motion.div>
   );
