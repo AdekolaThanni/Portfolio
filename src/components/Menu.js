@@ -44,7 +44,7 @@ function Menu({ isVisible, hideMenu }) {
           animate="visible"
           exit="hide"
           variants={parent}
-          className="fixed flex flex-col items-center justify-center gap-[2rem] overflow-hidden top-0 left-0 w-screen h-screen text-[4rem] bg-[#000000c4] backdrop-blur-lg shadow-md z-50 "
+          className="fixed flex flex-col items-center justify-center gap-[2rem] overflow-hidden top-0 left-0 w-screen h-screen text-[4rem] bg-[#000000c4] backdrop-blur-lg z-50 "
         >
           {/* Close icon */}
           <motion.div

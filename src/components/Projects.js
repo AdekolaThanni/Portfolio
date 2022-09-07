@@ -81,8 +81,10 @@ function Projects() {
                 <span className="text-[2rem] text-purple-secondary col-span-full mb-[.5rem]">
                   Tools
                 </span>
-                {project.tools.map((tool) => (
-                  <li className="w-fit">{tool}</li>
+                {project.tools.map((tool, index) => (
+                  <li key={index} className="w-fit">
+                    {tool}
+                  </li>
                 ))}
               </ul>
               {/* Links */}
