@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { navigationActions } from "../store/navigation";
-import { useEffect } from "react";
 
 function Section({ id, className, children, title }) {
-  const computedClassName = `${className} bg-black snap-start min-h-screen pt-[2rem] sm:pt-[5rem] text-left sm:text-center px-[1rem] sm:px-[2.5rem]`;
+  const computedClassName = `${className} bg-black min-h-screen pt-[2rem] sm:pt-[5rem] text-left sm:text-center px-[1rem] sm:px-[2.5rem] mb-[5rem]`;
   const ref = useRef();
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const dispatch = useDispatch();
@@ -13,11 +12,6 @@ function Section({ id, className, children, title }) {
   const updateSection = () => {
     dispatch(navigationActions.updateSection(id));
   };
-
-  useEffect(() => {
-    console.log(`${ref.current.id} is in view`);
-    console.log(isInView);
-  }, [isInView]);
 
   return (
     <motion.section

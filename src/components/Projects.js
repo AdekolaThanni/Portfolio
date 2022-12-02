@@ -1,53 +1,9 @@
 import React from "react";
 import Section from "./Section";
+import useProjectsList from "../hooks/useProjectsList";
 
-const projectsList = [
-  {
-    name: "Shortly",
-    imageUrl: "Shortly.png",
-    description:
-      "This is a web app that shortens urls based on the inputted live websitte. Also keeps record of shortened URL’s in the browser local storage for future use. Also allows copying shortened URL to clipboard by clicking a button for easier use.",
-    tools: [
-      "React",
-      "Redux",
-      "Tailwind CSS",
-      "Mongo DB",
-      "Node js",
-      "Express js",
-      "Stripe",
-      "React Router",
-      "Figma",
-      "Framer Motion",
-      "React Helmet",
-    ],
-    appWalkthroughVideoLink: "",
-    appLiveVersionLink: "",
-    appRepositoryLink: "",
-  },
-  {
-    name: "Shortly",
-    imageUrl: "Shortly.png",
-    description:
-      "This is a web app that shortens urls based on the inputted live websitte. Also keeps record of shortened URL’s in the browser local storage for future use. Also allows copying shortened URL to clipboard by clicking a button for easier use.",
-    tools: [
-      "React",
-      "Redux",
-      "Tailwind CSS",
-      "Mongo DB",
-      "Node js",
-      "Express js",
-      "Stripe",
-      "React Router",
-      "Figma",
-      "Framer Motion",
-      "React Helmet",
-    ],
-    appWalkthroughVideoLink: "",
-    appLiveVersionLink: "",
-    appRepositoryLink: "",
-  },
-];
 function Projects() {
+  const projectsList = useProjectsList();
   return (
     <Section
       id="projects"
@@ -62,13 +18,15 @@ function Projects() {
             className="flex sm:flex-row flex-col md:gap-[4rem] gap-[2rem] max-w-[105rem] mx-auto h-fit mb-[4rem]"
           >
             {/* Project image */}
-            <img
-              src={require(`../assets/img/${project.imageUrl}`)}
-              alt=""
-              className="sm:w-[60rem] w-full  sm:h-[60rem]  h-[30rem] object-cover object-left-top"
-            />
+            <div className="sm:w-[42rem] w-full  sm:h-[60rem]  h-[30rem] shrink-0">
+              <img
+                src={require(`../assets/img/${project.imageUrl}`)}
+                alt=""
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
             {/* Details */}
-            <div className="sm:text-left text-left sm:p-0 px-[.5rem] text-[1.6rem] flex justify-between gap-[3rem] flex-col">
+            <div className="sm:text-left text-left sm:p-0 px-[.5rem] text-[1.6rem] flex gap-[3rem] flex-col">
               {/* Project name and description */}
               <div className="">
                 <h3 className="text-[2.5rem] text-purple-secondary">
@@ -77,7 +35,7 @@ function Projects() {
                 <p className="">{project.description}</p>
               </div>
               {/* Tools used */}
-              <ul className="sm:block grid grid-cols-[repeat(2,minmax(min-content,1fr))] text-left  gap-y-[1rem]">
+              <ul className="sm:block grid grid-cols-[repeat(2,minmax(min-content,1fr))] text-left mb-auto  gap-y-[1rem]">
                 <span className="text-[2rem] text-purple-secondary col-span-full mb-[.5rem]">
                   Tools
                 </span>
