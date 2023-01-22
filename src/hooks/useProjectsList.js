@@ -19,7 +19,7 @@ const useProjectsList = () => [
     ],
     appWalkthroughVideoLink:
       "https://www.linkedin.com/posts/adekola-thanni-874a7523b_react-tech-project-activity-6983766078417965057--N7g?utm_source=share&utm_medium=member_desktop",
-    appLiveVersionLink: "https://runner-store.herokuapp.com/",
+    appLiveVersionLink: "https://runner-jb71.onrender.com",
     appRepositoryLink: "https://github.com/AdekolaThanni/Runner",
   },
   {
