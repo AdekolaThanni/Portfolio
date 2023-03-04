@@ -18,7 +18,7 @@ function Home() {
       onViewportEnter={updateSection}
       viewport={{ margin: "-100px 0px 0px" }}
       id="home"
-      className="flex items-center flex-col justify-center bg-black min-h-screen text-left sm:text-center relative"
+      className="flex items-center flex-col justify-center h-full bg-black text-left sm:text-center relative"
     >
       {/* Headline */}
       <motion.h1
@@ -30,7 +30,7 @@ function Home() {
             duration: 1,
           },
         }}
-        className="text-[9rem] leading-[10rem] mb-[.5rem] text-center flex flex-col items-center font-extrabold xl:text-[7rem] xl:leading-[8rem]"
+        className="text-[9rem] leading-[10rem] mb-[.5rem] text-center flex flex-col items-center font-extrabold xl:text-[7rem] xl:leading-[8rem] md-b:text-[7.5rem]"
       >
         <span className="md:mb-[1.5rem]">
           Fullstack{" "}
