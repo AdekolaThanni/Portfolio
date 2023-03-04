@@ -15,7 +15,7 @@ function Intro({ setAppVisible, appVisible }) {
         setAppVisible(true);
       }, 3200);
     }, 1000);
-  }, []);
+  }, [setAppVisible]);
 
   return (
     <AnimatePresence>
