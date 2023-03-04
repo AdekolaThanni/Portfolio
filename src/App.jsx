@@ -3,7 +3,6 @@ import Intro from "./components/Intro";
 import useAppHeight from "./hooks/useAppHeight";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
-import ProjectCaseStudy from "./components/ProjectCaseStudy";
 import Footer from "./components/Footer";
 
 const Contact = React.lazy(() => import("./components/Contact"));
@@ -30,7 +29,6 @@ function App() {
           <Home />
           <About />
           <Projects />
-          {/* <ProjectCaseStudy /> */}
           <Contact />
           <Footer />
         </motion.main>
