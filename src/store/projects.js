@@ -1,4 +1,6 @@
-const useProjectsList = () => [
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = [
   {
     name: "Runner",
     imageUrl: "Runner.png",
@@ -37,7 +39,7 @@ const useProjectsList = () => [
     imageUrl: "Upblog.png",
     description:
       "A website that connects to The Guardian API to display the latest news from all sections (Sports, Politics, Football, etc).",
-    tools: ["HTML", "SCSS", "Javascript", "Guardian RESTful API"],
+    tools: ["HTML", "Sass", "Javascript", "Guardian RESTful API"],
     appWalkthroughVideoLink: "",
     appLiveVersionLink: "https://upblog-adekola.netlify.app/",
     appRepositoryLink: "https://github.com/AdekolaThanni/Upblog",
@@ -47,11 +49,16 @@ const useProjectsList = () => [
     imageUrl: "Easybank.png",
     description:
       "A landing page made for a digital bank to display their edging features, latest articles and more.",
-    tools: ["React", "SCSS"],
+    tools: ["React", "Sass"],
     appWalkthroughVideoLink: "",
     appLiveVersionLink: "https://easybank-adekola.netlify.app/",
     appRepositoryLink: "https://github.com/AdekolaThanni/Easybank-Landing-Page",
   },
 ];
 
-export default useProjectsList;
+const projectsSlice = createSlice({
+  name: "projects",
+  initialState,
+});
+
+export default projectsSlice.reducer;

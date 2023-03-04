@@ -20,7 +20,7 @@ const useVanta = () => {
           maxDistance: 8.0,
           showDots: false,
           color: 0xaa14f0,
-          backgroundColor: 0x0,
+          backgroundColor: 0x131313,
         })
       );
     }

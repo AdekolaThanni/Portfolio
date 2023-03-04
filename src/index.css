@@ -4,48 +4,99 @@
 
 @layer base {
   html {
-    @apply sm:text-[50%] lg:text-[62.5%] text-[62.5%];
+    @apply lg:text-[50%] text-[62.5%];
   }
 
   body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Arial", sans-serif;
     font-size: 2.5rem;
-    background-color: black;
+    box-sizing: border-box;
     position: relative;
-  }
+    overflow: hidden;
 
-  main::-webkit-scrollbar {
-    display: none;
-  }
-  main {
-    scrollbar-width: none;
+    @apply bg-black;
   }
 }
 
-.nav-link-icon {
-  @apply sm:w-[5rem] sm:h-[5rem] w-[3.5rem] h-[3.5rem];
-}
+@layer components {
+  .bounce {
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
 
-.nav-link-icon:hover path {
-  @apply fill-purple-primary duration-75;
-}
+  .loading-bar {
+    background-image: linear-gradient(
+      to right,
+      rgb(170, 20, 240),
+      rgb(255, 87, 154)
+    );
+    animation-name: loading;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+  }
 
-.cta:hover > svg > path {
-  @apply fill-purple-primary duration-200;
-}
+  @keyframes loading {
+    0% {
+      width: 0%;
+    }
 
-.tools-grid > svg {
-  @apply sm:w-[6rem] sm:h-[6rem] w-[4.5rem] h-[4.5rem];
-}
+    100% {
+      width: 100%;
+    }
+  }
 
-.scrollbar::-webkit-scrollbar {
-  width: 0.2rem;
-}
+  @keyframes bounce {
+    0% {
+      transform: translateX(0);
+    }
 
-.scrollbar::-webkit-scrollbar-track {
-  background-color: none;
-}
+    50% {
+      transform: translateX(10px);
+    }
 
-.scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-purple-primary rounded-full;
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background-color: none;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #f1f1f113;
+  }
+
+  .background-gradient {
+    background-image: linear-gradient(
+      to right,
+      rgb(170, 20, 240),
+      rgb(255, 87, 154)
+    );
+  }
+
+  /* Add gradients to text */
+  .text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      rgb(170, 20, 240),
+      rgb(255, 87, 154)
+    );
+  }
+
+  .svg-gradient-stroke path {
+    stroke: url(#svg-gradient) #aa14f0;
+  }
+  .svg-gradient-fill path {
+    fill: url(#svg-gradient) #aa14f0;
+  }
 }
