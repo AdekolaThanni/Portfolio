@@ -11,9 +11,6 @@ const Contact = React.lazy(() => import("./components/Contact"));
 const Home = React.lazy(() => import("./components/Home"));
 const About = React.lazy(() => import("./components/About"));
 const Projects = React.lazy(() => import("./components/Projects"));
-const ProjectCaseStudy = React.lazy(() =>
-  import("./components/ProjectCaseStudy")
-);
 
 function App() {
   const [appVisible, setAppVisible] = useState(false);
