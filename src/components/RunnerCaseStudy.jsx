@@ -43,7 +43,7 @@ function RunnerCaseStudy() {
         </span>
       </p>
 
-      {/* Repository link */}
+      {/* Live app link */}
       <h3 className="text-[2rem] text-[#8a7350] block">Live App link</h3>
       <a
         href={project?.appRepositoryLink}

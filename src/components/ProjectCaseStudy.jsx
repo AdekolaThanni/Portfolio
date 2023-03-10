@@ -11,7 +11,7 @@ function ProjectCaseStudy({ children, visible }) {
         {/* Close icon */}
         <div
           onClick={() => dispatch(caseStudyActions.hideCaseStudy())}
-          className="hover:scale-110 fixed right-[5rem] top-[5rem] group cursor-pointer p-[.5rem] w-[5rem] h-[5rem] rounded-full background-gradient z-[1000] duration-100"
+          className="hover:scale-110 fixed right-[5rem] top-[5rem] md-b:right-[2rem] md-b:top-[2rem] group cursor-pointer p-[.5rem] w-[5rem] h-[5rem] rounded-full background-gradient z-[1000] duration-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
