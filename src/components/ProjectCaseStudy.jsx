@@ -1,13 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { caseStudyActions } from "../store/caseStudy";
 
 function ProjectCaseStudy({ children, visible }) {
-  // useEffect(() => {
-  //   alert("Change");
-  // }, [visible]);
-
   const dispatch = useDispatch();
 
   return (
