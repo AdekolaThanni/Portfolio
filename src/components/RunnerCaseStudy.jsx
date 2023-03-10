@@ -447,7 +447,7 @@ function RunnerCaseStudy() {
         </li>
         <li className="">
           Ensuring cross-browser compatibility of the app. This ensures the app
-          has a consisitent behaviour and outlook on all browsers be it Google
+          has a consistent behaviour and outlook on all browsers be it Google
           chrome, Mozilla firefox, Internet explorer, Safari and so on.
         </li>
         <li className="">

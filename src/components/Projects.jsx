@@ -70,7 +70,11 @@ const ProjectCard = ({ project }) => {
         {project.appLiveVersionLink && (
           <a
             href={project.appLiveVersionLink}
-            className="text-[2rem] hover:opacity-70 duration-100 ease-out border-b border-purple-secondary text-purple-secondary md-b:text-[1.6rem]"
+            className={`text-[2rem] hover:opacity-70 duration-100 ease-out border-b border-purple-secondary text-purple-secondary md-b:text-[1.6rem]
+             ${
+               project.name === "Easybank" &&
+               "w-fit px-[3rem] py-[1rem] rounded-full text-[2rem] ml-auto background-gradient hover:opacity-70 duration-100 ease-out md-b:text-[1.6rem] !text-white border-none"
+             }`}
             target="_blank"
             rel="noreferrer"
           >
@@ -81,14 +85,16 @@ const ProjectCard = ({ project }) => {
         {/* Project */}
 
         {/* View case study link */}
-        <button
-          onClick={() =>
-            dispatch(caseStudyActions.showCaseStudy({ ...project }))
-          }
-          className="w-fit px-[3rem] py-[1rem] rounded-full text-[2rem] ml-auto background-gradient hover:opacity-70 duration-100 ease-out md-b:text-[1.6rem]"
-        >
-          View Case Study &rarr;
-        </button>
+        {project.name !== "Easybank" && (
+          <button
+            onClick={() =>
+              dispatch(caseStudyActions.showCaseStudy({ ...project }))
+            }
+            className="w-fit px-[3rem] py-[1rem] rounded-full text-[2rem] ml-auto background-gradient hover:opacity-70 duration-100 ease-out md-b:text-[1.6rem]"
+          >
+            View Case Study &rarr;
+          </button>
+        )}
       </div>
     </li>
   );

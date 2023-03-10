@@ -23,8 +23,8 @@ function ShortlyCaseStudy() {
       <p className="mt-[2rem] mb-[6rem] indent-[3rem]">
         We've all had to attach a link tag to a message we're sending to someone
         before and we all know how much of a burden it is to have to deal with
-        the multiple paremeters and query endpoints in the url. This is a web
-        application that gives us an easy way of attaching those links to
+        the multiple parameters and query endpoints in the url. This is a web
+        application I built that gives an easy way of attaching those links to
         messages so they don't take up lot of spaces by shortening those links.
       </p>
 
@@ -156,11 +156,11 @@ function ShortlyCaseStudy() {
       </h3>
       <ul className="list-disc list-inside mt-[1rem] space-y-[1rem]">
         <li className="">
-          Storing shortened links so users can referr back to them in the future
+          Storing shortened links so users can refer back to them in the future
         </li>
         <li className="">
           Ensuring cross-browser compatibility of the app. This ensures the app
-          has a consisitent behaviour and outlook on all browsers be it Google
+          has a consistent behaviour and outlook on all browsers be it Google
           chrome, Mozilla firefox, Internet explorer, Safari and so on.
         </li>
         <li className="">

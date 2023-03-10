@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import TelegramCaseStudy from "./components/TelegramCaseStudy";
 import RunnerCaseStudy from "./components/RunnerCaseStudy";
 import ShortlyCaseStudy from "./components/ShortlyCaseStudy";
+import UpblogCaseStudy from "./components/UpblogCaseStudy";
 
 const Contact = React.lazy(() => import("./components/Contact"));
 const Home = React.lazy(() => import("./components/Home"));
@@ -39,6 +40,7 @@ function App() {
           <TelegramCaseStudy />
           <RunnerCaseStudy />
           <ShortlyCaseStudy />
+          <UpblogCaseStudy />
         </motion.main>
       )}
     </>
