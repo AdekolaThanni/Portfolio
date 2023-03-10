@@ -56,6 +56,18 @@ const initialState = [
     colorCode: "#61dafb",
   },
   {
+    title: "Framer Motion",
+    description:
+      "I use the React library to add smooth animation to JSX components",
+    colorCode: "#bb4b96",
+  },
+  {
+    title: "React Router",
+    description:
+      "I use the React library to integrate client side routing for client side rendered apps",
+    colorCode: "#CA4245",
+  },
+  {
     title: "Redux",
     description:
       "I use the JavaScript library to manage and centralize application state in React",
@@ -78,6 +90,12 @@ const initialState = [
     description:
       "I use the document-oriented NoSQL database to store high volume data",
     colorCode: "#599636",
+  },
+  {
+    title: "Cloudinary",
+    description:
+      "I use the cloud server to store uploaded media files by users",
+    colorCode: "#dc8327",
   },
   {
     title: "Socket.io",

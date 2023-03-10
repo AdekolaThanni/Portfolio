@@ -4,11 +4,16 @@ import useAppHeight from "./hooks/useAppHeight";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import TelegramCaseStudy from "./components/TelegramCaseStudy";
+import RunnerCaseStudy from "./components/RunnerCaseStudy";
 
 const Contact = React.lazy(() => import("./components/Contact"));
 const Home = React.lazy(() => import("./components/Home"));
 const About = React.lazy(() => import("./components/About"));
 const Projects = React.lazy(() => import("./components/Projects"));
+const ProjectCaseStudy = React.lazy(() =>
+  import("./components/ProjectCaseStudy")
+);
 
 function App() {
   const [appVisible, setAppVisible] = useState(false);
@@ -31,6 +36,10 @@ function App() {
           <Projects />
           <Contact />
           <Footer />
+
+          {/* Case studies */}
+          <TelegramCaseStudy />
+          <RunnerCaseStudy />
         </motion.main>
       )}
     </>

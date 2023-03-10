@@ -42,7 +42,7 @@ const ToolCard = ({ title, description, colorCode }) => {
       </h3>
 
       {/* Description */}
-      <p className="mt-[0.5rem] text-[1.8rem] md-b:text-[1.6rem] text-center text-[#d4d4d4]">
+      <p className="mt-[0.5rem] text-[1.6rem] text-center text-[#d4d4d4]">
         {description}.
       </p>
     </motion.div>

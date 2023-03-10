@@ -13,11 +13,11 @@ function Section({ id, className, children, title }) {
   return (
     <motion.section
       onViewportEnter={updateSection}
-      viewport={{ margin: "0px 0px -500px 0px" }}
+      viewport={{ margin: "0px 0px -200px 0px" }}
       id={id}
       className={`${className} pt-[35rem] text-left md:pt-[20rem]`}
     >
-      <div className="max-w-[102rem] mx-auto px-[4rem] md-b:px-[2rem]">
+      <div className="max-w-[106rem] mx-auto px-[4rem] md-b:px-[2rem]">
         {/* Heading */}
         <motion.h2
           initial={{ translateY: "20px", opacity: 0 }}
