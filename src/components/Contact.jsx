@@ -8,7 +8,7 @@ import LinkedIn from "../assets/svg/linkedin.svg";
 import Twitter from "../assets/svg/twitter.svg";
 import Gmail from "../assets/svg/gmail.svg";
 import Hashtag from "../assets/3d/Hashtag.png";
-import Resume from "../assets/file/Resume.docx";
+import Resume from "../assets/file/Resume Official.pdf";
 import Render3D from "./Render3D";
 
 function Contact() {
@@ -132,6 +132,7 @@ function Contact() {
 
       <a
         href={Resume}
+        type="application/pdf"
         target="_blank"
         rel="noreferrer"
         className="flex items-center gap-[1rem] text-[2rem] mt-[2rem] text-purple-secondary"
@@ -147,7 +148,7 @@ function Contact() {
             d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
           />
         </svg>
-        <span className="">resume.docx</span>
+        <span className="">resume.pdf</span>
       </a>
 
       {
