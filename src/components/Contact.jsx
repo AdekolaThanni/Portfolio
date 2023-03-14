@@ -3,7 +3,7 @@ import Section from "./Section";
 import useEmail from "../hooks/useEmail";
 import Feedback from "./Feedback";
 import { AnimatePresence } from "framer-motion";
-import Github from "../assets/svg/phone-android-outline.svg";
+import Github from "../assets/svg/github.svg";
 import LinkedIn from "../assets/svg/linkedin.svg";
 import Twitter from "../assets/svg/twitter.svg";
 import Gmail from "../assets/svg/gmail.svg";
