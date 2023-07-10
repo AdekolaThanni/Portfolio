@@ -55,6 +55,7 @@ const initialState = [
       "I use the JavaScript library to build user interfaces based on components",
     colorCode: "#61dafb",
   },
+
   {
     title: "Framer Motion",
     description:
@@ -72,6 +73,24 @@ const initialState = [
     description:
       "I use the JavaScript library to manage and centralize application state in React",
     colorCode: "#764ABC",
+  },
+  {
+    title: "Typescript",
+    description:
+      "I use the scripting or programming language to implement statically typed feature to Javascript",
+    colorCode: "#3178c6",
+  },
+  {
+    title: "React Native",
+    description:
+      "I use the JavaScript library to build user interfaces based on components for Mobile applications",
+    colorCode: "#61dafb",
+  },
+  {
+    title: "Solidity",
+    description:
+      "I use the programming language to develop smart contracts on the Ethereum blockchain",
+    colorCode: "#000000",
   },
   {
     title: "Node js",
